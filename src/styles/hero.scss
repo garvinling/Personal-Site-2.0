@@ -1,0 +1,28 @@
+@import './colors.scss';
+
+.hero-container{
+
+	width:100%;
+	border:0px solid red;
+	height:40vh;
+	background-color:$salmon;
+	padding-top:15%;
+
+
+	.name-container{
+		border:1px solid red;
+		width:300px;
+		margin:0 auto;
+		background-color:black;
+		color:white;
+	}
+
+	.subtitle{
+		color:white;
+		width:500px;
+		margin:0 auto;
+		margin-top:25px;
+
+	}
+
+}

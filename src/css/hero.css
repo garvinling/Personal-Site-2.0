@@ -1,0 +1,17 @@
+.hero-container {
+  width: 100%;
+  border: 0px solid red;
+  height: 40vh;
+  background-color: #FF6B6B;
+  padding-top: 15%; }
+  .hero-container .name-container {
+    border: 1px solid red;
+    width: 300px;
+    margin: 0 auto;
+    background-color: black;
+    color: white; }
+  .hero-container .subtitle {
+    color: white;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 25px; }
