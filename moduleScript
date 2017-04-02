@@ -1,0 +1,24 @@
+#!/bin/bash
+
+function createUIModule {
+
+	touch 'src/'$1'.jsx'
+	touch 'src/styles/'$1'.scss'
+	npm run build-css
+	npm start
+
+}
+
+echo "Please enter name of module: " 
+read input_var
+echo "You entered: $input_var"
+echo "Creating UI module: $input_var"
+createUIModule $input_var
+
+
+
+
+
+
+
+

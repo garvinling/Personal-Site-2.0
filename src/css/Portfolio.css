@@ -1,0 +1,13 @@
+.portfolio-container {
+  padding: 50px;
+  font-family: 'Roboto Slab',sans-serif;
+  background-color: #FAFAFA; }
+  .portfolio-container .title-container {
+    margin-bottom: 50px;
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 25px; }
+  .portfolio-container .portfolio-row {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 15px; }
