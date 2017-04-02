@@ -1,0 +1,63 @@
+@import './colors';
+
+
+
+.portfolio-item{
+	font-family:'Roboto',sans-serif;
+	position:relative;
+	width:389px;
+	height:391px;
+	background-color:white;
+	text-align:left;
+	padding-top:20px;
+	margin:0 auto;
+
+}
+
+
+.item-info{
+	padding-left:30px;
+}
+
+
+.project-summary{
+
+	color:$dark-gray;
+
+}
+
+.btn-container{
+
+
+
+
+
+
+}
+
+
+.btn-readmore{
+
+	background:none;
+	border:2px solid $dark-gray;
+	width:100px;
+	border-radius:33px;
+
+	&:hover{
+		border:2px solid $salmon;
+		color:$salmon;
+	}
+
+
+}
+
+
+.item-footer{
+
+	height:18px;
+	background-color:$green;
+	position:absolute;
+	bottom:0;
+	width:100%;
+
+}

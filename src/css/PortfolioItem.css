@@ -1,0 +1,31 @@
+.portfolio-item {
+  font-family: 'Roboto',sans-serif;
+  position: relative;
+  width: 389px;
+  height: 391px;
+  background-color: white;
+  text-align: left;
+  padding-top: 20px;
+  margin: 0 auto; }
+
+.item-info {
+  padding-left: 30px; }
+
+.project-summary {
+  color: #717171; }
+
+.btn-readmore {
+  background: none;
+  border: 2px solid #717171;
+  width: 100px;
+  border-radius: 33px; }
+  .btn-readmore:hover {
+    border: 2px solid #FF6B6B;
+    color: #FF6B6B; }
+
+.item-footer {
+  height: 18px;
+  background-color: #90D86E;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
