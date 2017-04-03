@@ -3,25 +3,29 @@
   font-weight: 700;
   width: 100%;
   height: 50vh;
-  background-color: #FF6B6B;
+  background-color: white;
   padding-top: 10%; }
   .hero-container .name-container {
     width: 350px;
     margin: 0 auto;
-    background-color: black;
-    color: white;
+    color: #2F2F2F;
     letter-spacing: 2px; }
     .hero-container .name-container .main-title {
       font-weight: 700; }
   .hero-container .subtitle {
-    color: white;
     width: 500px;
     margin: 0 auto;
     margin-top: 25px;
-    font-family: 'Roboto',sans-serif;
     font-size: 1.5em;
-    font-weight: 400; }
+    font-weight: 700; }
+  .hero-container .media-links {
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 1.3em; }
 
 .hero-content {
   width: 600px;
   margin: 0 auto; }
+
+.turbo-red {
+  color: #FF6B6B; }
