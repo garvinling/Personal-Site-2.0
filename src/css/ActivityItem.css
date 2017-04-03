@@ -1,0 +1,11 @@
+@font-face {
+  font-family: vcr-mono;
+  src: url("/font/VCR_MONO.ttf"); }
+
+.activity-item {
+  font-family: vcr-mono;
+  color: #717171;
+  font-weight: 100;
+  margin-bottom: 60px; }
+  .activity-item .activity-timestamp {
+    margin-top: 10px; }

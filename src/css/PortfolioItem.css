@@ -1,5 +1,5 @@
 .portfolio-item {
-  font-family: 'Roboto',sans-serif;
+  font-family: 'Roboto Slab',sans-serif;
   position: relative;
   width: 389px;
   height: 391px;
@@ -10,6 +10,9 @@
 
 .item-info {
   padding-left: 30px; }
+
+.project-name {
+  font-weight: 700; }
 
 .project-summary {
   color: #717171; }
@@ -24,7 +27,7 @@
     color: #FF6B6B; }
 
 .item-footer {
-  height: 18px;
+  height: 10px;
   background-color: #90D86E;
   position: absolute;
   bottom: 0;
