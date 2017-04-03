@@ -13,24 +13,24 @@ class Portfolio extends Component {
     		</div>
     		<div className="row portfolio-row">
     			<div className="col-md-4">
-    				<PortfolioItem/>
+    				<PortfolioItem projectName="KP Walk On!"/>
     			</div>
     			<div className="col-md-4">
-    				<PortfolioItem/>
+    				<PortfolioItem projectName="CLP"/>
     			</div>
     			<div className="col-md-4">
-    				<PortfolioItem/>
+    				<PortfolioItem projectName="Coffee Display"/>
     			</div>
     		</div>
             <div className="row portfolio-row">
                 <div className="col-md-4">
-                    <PortfolioItem/>
+                    <PortfolioItem projectName="Facewall"/>
                 </div>
                 <div className="col-md-4">
-                    <PortfolioItem/>
+                    <PortfolioItem projectName="Perspective"/>
                 </div>
                 <div className="col-md-4">
-                    <PortfolioItem/>
+                    <PortfolioItem projectName="Code Meets Coffee"/>
                 </div>
             </div>
     	</div>

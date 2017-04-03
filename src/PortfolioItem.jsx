@@ -13,7 +13,7 @@ class PortfolioItem extends Component {
     		<img src="/img/macbook.png" alt="mockup"  height="156"/>
  			
  			<div className="item-info">
-	 			<h3>Project Name</h3>
+	 			<h3 className="project-name">{this.props.projectName}</h3>
 
 	 			<p className="project-summary">
 	 			Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.

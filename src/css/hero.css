@@ -2,9 +2,9 @@
   font-family: 'Roboto Slab',sans-serif;
   font-weight: 700;
   width: 100%;
-  height: 50vh;
   background-color: white;
-  padding-top: 10%; }
+  padding-top: 10%;
+  padding-bottom: 200px; }
   .hero-container .name-container {
     width: 350px;
     margin: 0 auto;

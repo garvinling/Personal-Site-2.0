@@ -1,0 +1,24 @@
+
+@import './colors';
+
+
+@font-face {
+	font-family: vcr-mono;
+	src:url('/font/VCR_MONO.ttf');
+}
+
+
+
+.activity-item{
+
+	font-family:vcr-mono;
+	color: $dark-gray;
+	font-weight:100;
+	margin-bottom:60px;
+
+	.activity-timestamp{
+		margin-top:10px;
+	}
+
+}
+
