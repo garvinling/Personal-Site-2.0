@@ -11,7 +11,17 @@ class Hero extends Component {
           </div>  
 
           <div className="subtitle">
-            Located in Pasadena, CA currently doing full-stack web development at Kaiser Permanente. Working primarily in React and Node.js.
+          
+            Located in <span className="turbo-red">Pasadena, CA</span> currently doing full-stack web development at Kaiser Permanente. 
+            Primarily working with <span className="turbo-red">React</span> and <span className="turbo-red">Node.js</span>.
+          
+          </div>
+
+
+          <div className="media-links">
+            Check out my Github <a target="_blank" rel="noopener noreferrer" href="https://github.com/garvinling">here</a> <br/>
+            Sometimes I blog <a target="_blank" rel="noopener noreferrer" href="https://medium.com/@garvinling">here</a> <br/>
+            I rarely tweet <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/garvinling">here</a>   <br/>
           </div>
 
         </div>
