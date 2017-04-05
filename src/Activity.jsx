@@ -3,6 +3,33 @@ import './css/activity.css';
 import ActivityItem from './ActivityItem';
 
 class Activity extends Component {
+
+  constructor(props){
+
+    super(props);
+
+    this.displayFeed = this.displayFeed.bind(this);
+
+
+  }
+
+
+  displayFeed(){
+
+    var activities = this.props.feed.map((obj,idx) => {
+
+        console.log(obj);
+        return <ActivityItem key={idx} timestamp={obj.timestamp} one={obj.repo} two={obj.action}/>
+
+    });
+
+
+    return activities;
+
+  }
+
+
+
   render() {
     return (
     	
@@ -15,10 +42,8 @@ class Activity extends Component {
 
 
             <div className="activity-feed">
-                <ActivityItem timestamp="3/24/17 3:35 PM" one="garvinling/Personal-Site-2.0" two="initial commit && added sass build scripts"/>
-                <ActivityItem timestamp="3/25/17 3:35 PM"  one="garvinling/Personal-Site-2.0" two="initial commit && added sass build scripts"/>
-                <ActivityItem timestamp="3/26/17 3:35 PM"  one="garvinling/Personal-Site-2.0" two="initial commit && added sass build scripts"/>
-
+            {this.displayFeed()}
+     
             </div>
 
 
