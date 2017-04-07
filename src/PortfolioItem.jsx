@@ -16,7 +16,7 @@ class PortfolioItem extends Component {
 	 			<h3 className="project-name">{this.props.projectName}</h3>
 
 	 			<p className="project-summary">
-	 			Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+	 			{this.props.projectDescription}
 	 			</p>
 
 	 			<div className="btn-container">
