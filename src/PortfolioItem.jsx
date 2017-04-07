@@ -10,8 +10,10 @@ class PortfolioItem extends Component {
 
     	<div className="portfolio-item">
 
+      <div className="img-container">
     		<img src="/img/macbook.png" alt="mockup"  height="156"/>
- 			
+ 			</div>
+      
  			<div className="item-info">
 	 			<h3 className="project-name">{this.props.projectName}</h3>
 
@@ -25,7 +27,6 @@ class PortfolioItem extends Component {
  			</div>
 
 
- 			<div className="item-footer"></div>
 
     	</div>
 

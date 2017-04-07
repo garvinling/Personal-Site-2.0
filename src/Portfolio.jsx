@@ -63,25 +63,31 @@ class Portfolio extends Component {
     		<div className="title-container">
 	    		<h1 className="section-header">My Work</h1>
     		</div>
-    		<div className="row portfolio-row">
-    			<div className="col-md-4">
-    				<PortfolioItem projectName={this.state.projects[0].projectName} projectDescription={this.state.projects[0].projectDescription}/>
-    			</div>
-    			<div className="col-md-4">
-    				<PortfolioItem projectName={this.state.projects[1].projectName} projectDescription={this.state.projects[1].projectDescription}/>
-    			</div>
-    			<div className="col-md-4">
-    				<PortfolioItem projectName={this.state.projects[2].projectName} projectDescription={this.state.projects[2].projectDescription}/>
-    			</div>
-    		</div>
+
             <div className="row portfolio-row">
-                <div className="col-md-4">
+                <div className="col-md-6">
+                    <PortfolioItem projectName={this.state.projects[0].projectName} projectDescription={this.state.projects[0].projectDescription}/>
+
+                </div>
+                <div className="col-md-6">
+                    <PortfolioItem projectName={this.state.projects[1].projectName} projectDescription={this.state.projects[1].projectDescription}/>
+                </div>
+            </div>
+            <div className="row portfolio-row">
+                <div className="col-md-6">
+                    <PortfolioItem projectName={this.state.projects[2].projectName} projectDescription={this.state.projects[2].projectDescription}/>
+
+                </div>
+                <div className="col-md-6">
                     <PortfolioItem projectName={this.state.projects[3].projectName} projectDescription={this.state.projects[3].projectDescription}/>
                 </div>
-                <div className="col-md-4">
+            </div>
+            <div className="row portfolio-row">
+                <div className="col-md-6">
                     <PortfolioItem projectName={this.state.projects[4].projectName} projectDescription={this.state.projects[4].projectDescription}/>
+
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-6">
                     <PortfolioItem projectName={this.state.projects[5].projectName} projectDescription={this.state.projects[5].projectDescription}/>
                 </div>
             </div>

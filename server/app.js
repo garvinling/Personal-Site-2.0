@@ -1,29 +1,15 @@
-const express = require('express');
-const path    = require('path');
-const https   = require('https');
-const app     = express();
-const request = require('request');
-const Q       = require('q');
-const cors    = require('cors');
+'use strict';
+const express                = require('express');
+const path                   = require('path');
+const https                  = require('https');
+const app                    = express();
+const request                = require('request');
+const Q                      = require('q');
+const cors                   = require('cors');
+const MAX_ACTIVITY_FEED_SIZE = 3;
 
 
-const MAX_ACTIVITY_FEED_SIZE = 2;
 
-
-request({
-  uri: "https://api.github.com/users/garvinling/events",
-  method: "GET",
-  timeout: 10000,
-  followRedirect: true,
-  headers:{'user-agent':'node.js'},
-  maxRedirects: 10
-}, function(error, response, body) {
-
-	var res = JSON.parse(body);
-
-	parseActivity(res);
-
-});
 
 app.use(cors());
 app.use(express.static(path.resolve(__dirname, '..', 'build')));
@@ -78,9 +64,11 @@ function parseActivity(activityFeed){
 	var feedCounter = 0;
 	var time;
 	var activity;
-	//fix crash here when fetch fails 
-	activityFeed.forEach(function(item){
 
+
+	for(let i = 0; i < activityFeed.length; i++){
+
+		let item = activityFeed[i];
 
 		if(item.type === 'PullRequestEvent' && item.payload.action === 'opened'){
 
@@ -99,14 +87,14 @@ function parseActivity(activityFeed){
 			feedCounter +=1;  //TODO fix this loop, only grab 3 events
 
 			if(feedCounter === MAX_ACTIVITY_FEED_SIZE || feedCounter === activityFeed.length - 1){
-				console.log(activities.length);
-				deferred.resolve(activities);
 
+				deferred.resolve(activities);
+				i = activityFeed.length;
 			}
 
 		}
+	}
 
-	});
 
 	return deferred.promise;
 
