@@ -8,8 +8,7 @@
 	position:relative;
 	width:389px;
 	height:391px;
-	background-color:white;
-	text-align:left;
+	text-align:center;
 	padding-top:20px;
 	margin:0 auto;
 
@@ -17,7 +16,7 @@
 
 
 .item-info{
-	padding-left:30px;
+	padding-left:0px;
 }
 
 .project-name{
@@ -32,6 +31,12 @@
 }
 
 
+.img-container{
+
+	display:inline-block;
+	width:auto;
+	margin:0 auto;
+}
 
 
 .btn-readmore{
