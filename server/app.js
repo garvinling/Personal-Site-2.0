@@ -37,17 +37,19 @@ app.post('/api/activity', (req,res) => {
 
 		if(error){
 
+			console.log('Connection error');
 			res.send(error);
 
-		}
-		//fix crash here when fetch fails 
-		parseActivity(JSON.parse(body))
-			.then(function(feed){
-				console.log('done');
-				res.send(feed);
+		} else {
+
+			parseActivity(JSON.parse(body))
+				.then(function(feed){
+					console.log('done');
+					res.send(feed);
 
 			});
 
+		}
 
 	});
 
