@@ -48,7 +48,22 @@ class App extends Component {
     return (
       <div className="App">
         <Hero/>
-        <Activity feed={this.state.activities}/>
+        <div className="row">
+          <div className="col-md-6">
+            
+            <Activity feed={this.state.activities}/>
+
+          </div>
+          <div className="col-md-6">
+            <div className="title-container">
+                <h1 className="section-header">Recent Blogs</h1>
+            </div>
+
+
+
+
+          </div>
+        </div>
         <Portfolio />
       </div>
     );

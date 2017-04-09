@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './css/activity.css';
 import ActivityItem from './ActivityItem';
+import Loading from './Loading';
 
 class Activity extends Component {
 
@@ -16,9 +17,19 @@ class Activity extends Component {
 
   displayFeed(){
 
+
+    if(this.props.feed.length === 0){
+
+      return (
+        <div>
+        <Loading/>
+        <Loading/>
+        </div>
+      );
+    }
+
     var activities = this.props.feed.map((obj,idx) => {
 
-        console.log(obj);
         return <ActivityItem key={idx} timestamp={obj.timestamp} one={obj.repo} two={obj.action}/>
 
     });
