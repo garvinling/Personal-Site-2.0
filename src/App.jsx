@@ -57,7 +57,6 @@ class App extends Component {
           <div className="col-md-6">
             <div className="title-container">
                 <h1 className="section-header">Recent Blogs</h1>
-                <a href="">Getting familiar with SASS</a>
             </div>
 
 
