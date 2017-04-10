@@ -1,0 +1,11 @@
+@import './colors';
+
+.footer-container{
+	color:white;
+	font-family:'Roboto Slab',sans-serif;
+	padding-bottom:60px;
+	padding-top:40px;
+	border-top:1px solid $dark-gray;
+	background-color:$slate-gray;
+	margin-top:100px;
+}

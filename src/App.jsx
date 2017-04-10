@@ -3,6 +3,7 @@ import './css/App.css';
 import Hero from './Hero';
 import Portfolio from './Portfolio';
 import Activity from './Activity';
+import Footer from './Footer';
 
 class App extends Component {
 
@@ -65,6 +66,7 @@ class App extends Component {
           </div>
         </div>
         <Portfolio />
+        <Footer />
       </div>
     );
   }
