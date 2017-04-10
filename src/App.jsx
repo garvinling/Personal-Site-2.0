@@ -12,14 +12,39 @@ class App extends Component {
   	super(props);
     this.state={
 
-      activities:[]
+      activities:[],
+      blogs:[]
 
 
     }
 
   	this.retrieveActivityFeed = this.retrieveActivityFeed.bind(this);
+    this.retrieveBlogPosts = this.retrieveBlogPosts.bind(this);
 
     this.retrieveActivityFeed();
+    this.retrieveBlogPosts();
+
+  }
+ 
+  retrieveBlogPosts(){
+
+    let url ='http://localhost:9000/api/blogs';
+
+
+    fetch(url , {
+      method: 'POST'
+    }).then(function(response){
+        
+        response.json()
+          .then(function(res){
+
+            this.setState({blogs:res});
+        
+          }.bind(this));
+
+    }.bind(this));
+
+
 
   }
 
@@ -59,7 +84,6 @@ class App extends Component {
             <div className="title-container">
                 <h1 className="section-header">Recent Blogs</h1>
             </div>
-
 
 
 

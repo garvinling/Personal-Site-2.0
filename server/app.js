@@ -7,7 +7,7 @@ const request                = require('request');
 const Q                      = require('q');
 const cors                   = require('cors');
 const MAX_ACTIVITY_FEED_SIZE = 3;
-
+const MAX_BLOG_FEED_SIZE = 3;
 
 
 
@@ -19,6 +19,37 @@ app.get('*',(req,res) => {
 
 	res.sendFile(path.resolve(__dirname,'..','build','index.html'));
 
+});
+
+
+app.post('/api/blogs',(req,res) => {
+	console.log('iowherowiehr');
+	request({
+	  uri: "https://medium.com/@garvinling/latest",
+	  method: "GET",
+	  timeout: 10000,
+	  followRedirect: true,
+	  headers:{'accept':'application/json'},
+	  maxRedirects: 10
+	}, function(error, response, body) {
+
+		if(error){
+
+			console.log('Connection error');
+			res.send(error);
+
+		} else {
+
+
+			let strippedPosts = body.substring(16,body.length); //stripping ])}while(1);</x> from response
+
+			let result = parseBlogs(JSON.parse(strippedPosts));
+
+			res.send(result);
+
+		}
+
+	});
 });
 
 
@@ -58,6 +89,41 @@ app.post('/api/activity', (req,res) => {
 
 });
 
+function parseBlogs(blogs){
+
+	let blogArray   = [];
+	let baseURL     = 'https://medium.com/@garvinling/';
+	let posts       = blogs.payload.references.Post;
+	let blogCounter = 0;
+
+	for(let p in posts){
+
+		if(posts.hasOwnProperty(p)){
+
+			let blogObject = {
+
+				'title' : posts[p].title,
+				'url'   : `${baseURL}${posts[p].slug}-${p}`
+
+			};
+
+			blogArray.push(blogObject);
+			console.log(blogObject);
+			blogCounter++;
+
+	
+		}
+	}
+
+	if(blogCounter > MAX_BLOG_FEED_SIZE){
+
+		blogArray = blogArray.slice(0 , MAX_BLOG_FEED_SIZE);		//keeping only the most recent blogs
+
+	}
+
+	return blogArray;
+
+}
 
 function parseActivity(activityFeed){
 
