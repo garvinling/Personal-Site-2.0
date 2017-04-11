@@ -6,9 +6,10 @@ const app                    = express();
 const request                = require('request');
 const Q                      = require('q');
 const cors                   = require('cors');
+const moment 				 = require('moment');
 const MAX_ACTIVITY_FEED_SIZE = 3;
-const MAX_BLOG_FEED_SIZE = 3;
-
+const MAX_BLOG_FEED_SIZE     = 3;
+const MAX_BLOG_TAG_SIZE      = 3;
 
 
 app.use(cors());
@@ -23,7 +24,7 @@ app.get('*',(req,res) => {
 
 
 app.post('/api/blogs',(req,res) => {
-	console.log('iowherowiehr');
+ 
 	request({
 	  uri: "https://medium.com/@garvinling/latest",
 	  method: "GET",
@@ -40,7 +41,7 @@ app.post('/api/blogs',(req,res) => {
 
 		} else {
 
-
+			console.log('OWiher')
 			let strippedPosts = body.substring(16,body.length); //stripping ])}while(1);</x> from response
 
 			let result = parseBlogs(JSON.parse(strippedPosts));
@@ -96,14 +97,19 @@ function parseBlogs(blogs){
 	let posts       = blogs.payload.references.Post;
 	let blogCounter = 0;
 
+
 	for(let p in posts){
 
+		let tagString = buildBlogTags(posts[p].virtuals.tags);
+		
 		if(posts.hasOwnProperty(p)){
 
 			let blogObject = {
 
 				'title' : posts[p].title,
-				'url'   : `${baseURL}${posts[p].slug}-${p}`
+				'url'   : `${baseURL}${posts[p].slug}-${p}`,
+				'date'  : moment(posts[p].createdAt).format('L'),
+				'tags'  : tagString
 
 			};
 
@@ -125,10 +131,35 @@ function parseBlogs(blogs){
 
 }
 
-function parseActivity(activityFeed){
 
-	var deferred = Q.defer();
-	var activities = [];
+
+function buildBlogTags(tags){
+
+	// console.log(tags);
+	let tagCounter = 0;
+	let tagString  = '';
+
+	for(let i = 0; i < tags.length; i++){
+
+		tagString += `${tags[i].slug}`;
+		tagCounter++;
+		if(tagCounter === MAX_BLOG_TAG_SIZE){
+
+			return tagString;
+
+		}
+
+		tagString+=',';		
+
+	}
+
+
+}
+
+function parseActivity(activityFeed){
+	
+	var deferred    = Q.defer();
+	var activities  = [];
 	var feedCounter = 0;
 	var time;
 	var activity;
@@ -152,7 +183,7 @@ function parseActivity(activityFeed){
 			};
 
 			activities.push(activity);
-			feedCounter +=1;  //TODO fix this loop, only grab 3 events
+			feedCounter +=1;  
 
 			if(feedCounter === MAX_ACTIVITY_FEED_SIZE || feedCounter === activityFeed.length - 1){
 
