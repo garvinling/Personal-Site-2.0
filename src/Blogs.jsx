@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './css/activity.css';
-import ActivityItem from './ActivityItem';
+import './css/Blogs.css';
 import Loading from './Loading';
+import BlogItem from './BlogItem';
 
-class Activity extends Component {
+class Blogs extends Component {
 
   constructor(props){
 
@@ -13,6 +13,7 @@ class Activity extends Component {
 
 
   }
+
 
 
   displayFeed(){
@@ -28,24 +29,23 @@ class Activity extends Component {
       );
     }
 
-    var activities = this.props.feed.map((obj,idx) => {
+    var blogs = this.props.feed.map((obj,idx) => {
 
-        return <ActivityItem key={idx} timestamp={obj.timestamp} one={obj.repo} two={obj.action}/>
+        return <BlogItem key={idx} title={obj.title} url={obj.url} date={obj.date} tags={obj.tags}/>
 
     });
 
 
-    return activities;
+    return blogs;
 
   }
 
 
-
   render() {
     return (
-    	
+      
 
-    	<div className="activity-container">
+      <div className="activity-container">
 
             <div className="title-container">
                 <h1 className="section-header">{this.props.title}</h1>
@@ -57,11 +57,11 @@ class Activity extends Component {
             </div>
 
 
-    	</div>
+      </div>
 
 
     );
   }
 }
 
-export default Activity;
+export default Blogs;

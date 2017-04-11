@@ -3,6 +3,7 @@ import './css/App.css';
 import Hero from './Hero';
 import Portfolio from './Portfolio';
 import Activity from './Activity';
+import Blog from './Blogs';
 import Footer from './Footer';
 
 class App extends Component {
@@ -12,14 +13,39 @@ class App extends Component {
   	super(props);
     this.state={
 
-      activities:[]
+      activities:[],
+      blogs:[]
 
 
     }
 
   	this.retrieveActivityFeed = this.retrieveActivityFeed.bind(this);
+    this.retrieveBlogPosts = this.retrieveBlogPosts.bind(this);
 
     this.retrieveActivityFeed();
+    this.retrieveBlogPosts();
+
+  }
+ 
+  retrieveBlogPosts(){
+
+    let url ='http://localhost:9000/api/blogs';
+
+
+    fetch(url , {
+      method: 'POST'
+    }).then(function(response){
+        
+        response.json()
+          .then(function(res){
+
+            this.setState({blogs:res});
+        
+          }.bind(this));
+
+    }.bind(this));
+
+
 
   }
 
@@ -46,25 +72,25 @@ class App extends Component {
  
 
   render() {
+    console.log(this.state);
     return (
       <div className="App">
         <Hero/>
         <div className="row">
+          
           <div className="col-md-6">
-            
-            <Activity feed={this.state.activities}/>
-
+            <Activity title="My Github Feed" feed={this.state.activities}/>
           </div>
+
           <div className="col-md-6">
-            <div className="title-container">
-                <h1 className="section-header">Recent Blogs</h1>
-            </div>
-
-
+      
+            <Blog title="Recent Blogs" feed={this.state.blogs}/>
 
 
           </div>
         </div>
+
+
         <Portfolio />
         <Footer />
       </div>
