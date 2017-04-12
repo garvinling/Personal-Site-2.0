@@ -14,8 +14,8 @@ dependencies:
     #- docker login -u $DOCKER_LOGIN -p $DOCKER_PW -e $DOCKER_EMAIL
     #- docker push scalkpdev/vcpq-site:0.1.$CIRCLE_BUILD_NUM
 
-# deployment:
-#   production:
-#     branch: docker-ci-integration
-#     commands:
-#      - ./deploy.sh
+deployment:
+  production:
+    branch: reorder-projects
+    commands:
+     - ./deploy.sh
