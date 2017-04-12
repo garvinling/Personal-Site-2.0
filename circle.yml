@@ -1,0 +1,21 @@
+machine:
+  services:
+    - docker
+
+
+dependencies:
+  post:
+    - npm run build
+
+# test:
+#   post:
+    #- docker build -t scalkpdev/vcpq-site:0.1.$CIRCLE_BUILD_NUM .
+    #- docker run -d -p 3000:3000 --name vcpq-container scalkpdev/vcpq-site:0.1.$CIRCLE_BUILD_NUM
+    #- docker login -u $DOCKER_LOGIN -p $DOCKER_PW -e $DOCKER_EMAIL
+    #- docker push scalkpdev/vcpq-site:0.1.$CIRCLE_BUILD_NUM
+
+# deployment:
+#   production:
+#     branch: docker-ci-integration
+#     commands:
+#      - ./deploy.sh
