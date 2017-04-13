@@ -29,7 +29,7 @@ class App extends Component {
  
   retrieveBlogPosts(){
 
-    let url ='http://localhost:9000/api/blogs';
+    let url ='/api/blogs';
 
 
     fetch(url , {
@@ -52,7 +52,7 @@ class App extends Component {
 
   retrieveActivityFeed(){
 
-  	let url = 'http://localhost:9000/api/activity';
+  	let url = '/api/activity';
 
   	fetch(url , {
       method: 'POST'
@@ -72,7 +72,7 @@ class App extends Component {
  
 
   render() {
-    console.log(this.state);
+
     return (
       <div className="App">
         <Hero/>
