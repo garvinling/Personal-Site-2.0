@@ -1,6 +1,13 @@
 
 @import './colors';
 
+.activities-container{
+	width:80%;
+	max-width:1400px;
+	margin:0 auto;
+}
+
+
 .activity-container{
 
 	height:auto;
@@ -10,7 +17,7 @@
 
 .activity-feed{
 
-	width:500px;
+	// width:400px;
 	margin:0 auto;
 	padding:40px;
 }

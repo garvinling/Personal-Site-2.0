@@ -6,12 +6,12 @@
 
 	font-family:'Roboto Slab',sans-serif;
 	position:relative;
-	width:389px;
-	height:391px;
+	// width:389px;
+	// height:391px;
 	text-align:center;
 	padding-top:20px;
 	margin:0 auto;
-
+	margin-bottom:100px;
 }
 
 
@@ -27,35 +27,37 @@
 .project-summary{
 
 	color:$dark-gray;
-
+	padding:15px;
+	padding-left:10%;
+	padding-right:10%;
 }
 
 
 .img-container{
 
-	display:inline-block;
+	// display:inline-block; 
 	width:100%;
-	background-size:cover;
 	margin:0 auto;
-	height:156px;
-	margin-bottom:20px;
+	height:250px;
+	margin-bottom:10px;
+	overflow:hidden;
 }
 
 
-.btn-readmore{
+// .btn-readmore{
 
-	background:none;
-	border:2px solid $dark-gray;
-	width:100px;
-	border-radius:33px;
+// 	background:none;
+// 	border:2px solid $dark-gray;
+// 	width:100px;
+// 	border-radius:33px;
 
-	&:hover{
-		border:2px solid $salmon;
-		color:$salmon;
-	}
+// 	&:hover{
+// 		border:2px solid $salmon;
+// 		color:$salmon;
+// 	}
 
 
-}
+// }
 
 
 .item-footer{
@@ -67,3 +69,12 @@
 	width:100%;
 
 }
+
+
+
+
+
+
+
+
+

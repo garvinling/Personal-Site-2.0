@@ -8,9 +8,10 @@
     background-position: 468px 0; } }
 
 .loading-container {
-  height: 576px;
   overflow: hidden;
+  width: 420px;
   height: 260px;
+  margin: 0 auto;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;

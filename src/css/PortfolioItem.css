@@ -4,11 +4,10 @@
 .portfolio-item {
   font-family: 'Roboto Slab',sans-serif;
   position: relative;
-  width: 389px;
-  height: 391px;
   text-align: center;
   padding-top: 20px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-bottom: 100px; }
 
 .item-info {
   padding-left: 0px; }
@@ -17,24 +16,17 @@
   font-weight: 700; }
 
 .project-summary {
-  color: #717171; }
+  color: #717171;
+  padding: 15px;
+  padding-left: 10%;
+  padding-right: 10%; }
 
 .img-container {
-  display: inline-block;
   width: 100%;
-  background-size: cover;
   margin: 0 auto;
-  height: 156px;
-  margin-bottom: 20px; }
-
-.btn-readmore {
-  background: none;
-  border: 2px solid #717171;
-  width: 100px;
-  border-radius: 33px; }
-  .btn-readmore:hover {
-    border: 2px solid #FF6B6B;
-    color: #FF6B6B; }
+  height: 250px;
+  margin-bottom: 10px;
+  overflow: hidden; }
 
 .item-footer {
   height: 10px;

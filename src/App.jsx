@@ -29,7 +29,7 @@ class App extends Component {
  
   retrieveBlogPosts(){
 
-    let url ='http://localhost:9000/api/blogs';
+    let url ='/api/blogs';
 
 
     fetch(url , {
@@ -52,7 +52,7 @@ class App extends Component {
 
   retrieveActivityFeed(){
 
-  	let url = 'http://localhost:9000/api/activity';
+  	let url = '/api/activity';
 
   	fetch(url , {
       method: 'POST'
@@ -72,24 +72,20 @@ class App extends Component {
  
 
   render() {
-    console.log(this.state);
+
     return (
       <div className="App">
         <Hero/>
-        <div className="row">
+        <div className="row activities-container">
           
           <div className="col-md-6">
             <Activity title="My Github Feed" feed={this.state.activities}/>
           </div>
 
           <div className="col-md-6">
-      
             <Blog title="Recent Blogs" feed={this.state.blogs}/>
-
-
           </div>
         </div>
-
 
         <Portfolio />
         <Footer />
