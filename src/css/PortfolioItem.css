@@ -4,7 +4,6 @@
 .portfolio-item {
   font-family: 'Roboto Slab',sans-serif;
   position: relative;
-  width: 389px;
   text-align: center;
   padding-top: 20px;
   margin: 0 auto;
@@ -22,8 +21,9 @@
 .img-container {
   width: 100%;
   margin: 0 auto;
-  height: 156px;
-  margin-bottom: 100px; }
+  height: 250px;
+  margin-bottom: 10px;
+  overflow: hidden; }
 
 .item-footer {
   height: 10px;

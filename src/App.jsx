@@ -83,13 +83,9 @@ class App extends Component {
           </div>
 
           <div className="col-md-6">
-      
             <Blog title="Recent Blogs" feed={this.state.blogs}/>
-
-
           </div>
         </div>
-
 
         <Portfolio />
         <Footer />
