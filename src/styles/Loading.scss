@@ -18,15 +18,16 @@ $container-width:418px;
 
 .loading-container{
 
-	height:576px;
+	// height:576px;
     overflow:hidden;
+    width:420px;
     height:260px;
+    margin:0 auto;
 	animation-duration:2s;
 	animation-fill-mode:forwards;
 	animation-iteration-count:infinite;
 	animation-name:placeHolderText;
 	background:#f6f7f8;
-
 	background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
 	position:relative;
 }

@@ -76,7 +76,7 @@ class App extends Component {
     return (
       <div className="App">
         <Hero/>
-        <div className="row">
+        <div className="row activities-container">
           
           <div className="col-md-6">
             <Activity title="My Github Feed" feed={this.state.activities}/>

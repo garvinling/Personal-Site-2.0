@@ -27,7 +27,9 @@
 .project-summary{
 
 	color:$dark-gray;
-
+	padding:15px;
+	padding-left:10%;
+	padding-right:10%;
 }
 
 
@@ -38,7 +40,6 @@
 	margin:0 auto;
 	height:250px;
 	margin-bottom:10px;
-	// border:1px solid red;
 	overflow:hidden;
 }
 
@@ -73,41 +74,7 @@
 
 
 
-@media (min-width:1033px) and (max-width:1190px){
 
-
-
-
-
-}
-
-@media (min-width:768px) and (max-width:1032px){
-
-
-
-
-
-}
-
-
-
-
-@media (min-width:375px) and (max-width:767px){
-
-
-
-
-
-
-
-}
-
-
-@media (min-width:0px) and (max-width:374px){
-
-
-
-}
 
 
 
