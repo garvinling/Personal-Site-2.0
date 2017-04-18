@@ -29,3 +29,29 @@
 .hero-content {
   width: 600px;
   margin: 0 auto; }
+
+@media (min-width: 375px) and (max-width: 767px) {
+  .hero-container .name-container .main-title {
+    font-weight: 700;
+    font-size: 1.7em; }
+  .hero-container .subtitle {
+    width: 80%;
+    font-size: 0.8em; }
+  .hero-container .media-links {
+    font-size: 1em; }
+  .hero-content {
+    width: 100%;
+    margin: 0 auto; } }
+
+@media (min-width: 0px) and (max-width: 374px) {
+  .hero-container .name-container .main-title {
+    font-weight: 700;
+    font-size: 1.7em; }
+  .hero-container .subtitle {
+    width: 80%;
+    font-size: 0.8em; }
+  .hero-container .media-links {
+    font-size: 1em; }
+  .hero-content {
+    width: 100%;
+    margin: 0 auto; } }
