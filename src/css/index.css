@@ -10,11 +10,9 @@ body {
 a {
   color: #FF6B6B; }
   a:hover {
-    color: #ff7f7f;
-    font-size: 1.4em;
+    color: #ff3838 !important;
     text-decoration: none; }
   a:active, a:visited {
-    color: #ff7f7f;
     text-decoration: none; }
 
 .section-header {

@@ -12,15 +12,14 @@ a{
 	color:$salmon;
 
 	&:hover{
-		color:lighten($salmon,4%);
-		font-size:1.4em;
+		color:darken($salmon,10%) !important;
 		text-decoration:none;
 
 	}
 
 	&:active , &:visited{
 		
-		color:lighten($salmon,4%);
+		// color:darken($salmon,4%) !important;
 		text-decoration: none;
 	}
 
