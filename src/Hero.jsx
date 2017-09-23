@@ -12,8 +12,8 @@ class Hero extends Component {
 
           <div className="subtitle">
           
-            Located in <span className="turbo-red">Pasadena, CA</span> currently doing full-stack web development at Kaiser Permanente. 
-            Primarily working with <span className="turbo-red">React</span> and <span className="turbo-red">Node.js</span>.
+            Currently in <span className="turbo-red">Seattle, WA</span> building cool stuff for Alexa @ <span className="turbo-red">Amazon</span>.
+           
           
           </div>
 
