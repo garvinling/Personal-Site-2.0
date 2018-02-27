@@ -76,7 +76,7 @@ class App extends Component {
     return (
       <div className="App">
         <Hero/>
-        <div className="row activities-container">
+        { /** <div className="row activities-container">
           
           <div className="col-md-6">
             <Activity title="My Github Feed" feed={this.state.activities}/>
@@ -86,6 +86,7 @@ class App extends Component {
             <Blog title="Recent Blogs" feed={this.state.blogs}/>
           </div>
         </div>
+        **/ }
 
         <Portfolio />
         <Footer />
