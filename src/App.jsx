@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './css/App.css';
 import Hero from './Hero';
-import Portfolio from './Portfolio';
-import Activity from './Activity';
+// import Portfolio from './Portfolio';
+// import Activity from './Activity';
 import Blog from './Blogs';
 import Footer from './Footer';
 
