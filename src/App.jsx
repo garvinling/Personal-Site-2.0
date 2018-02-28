@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './css/App.css';
 import Hero from './Hero';
-// import Portfolio from './Portfolio';
+import Portfolio from './Portfolio';
 // import Activity from './Activity';
-import Blog from './Blogs';
+// import Blog from './Blogs';
 import Footer from './Footer';
 
 class App extends Component {
