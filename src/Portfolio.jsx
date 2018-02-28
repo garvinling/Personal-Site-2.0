@@ -28,8 +28,8 @@ class Portfolio extends Component {
                 imgLink : '/img/projects/videos/WalkOn.gif'
             },
             {
-                projectName : 'CLP',
-                projectDescription : 'A project management application for tracking active projects in the Southern California region.',
+                projectName : 'KP Project Dashboard',
+                projectDescription : 'A project management application for tracking active projects for Kaiser Permanente in the Southern California region.',
                 imgLink : '/img/projects/videos/CLP.gif'
             },
             {
@@ -41,15 +41,7 @@ class Portfolio extends Component {
                 projectName : 'Facewall',
                 projectDescription: 'An animated 6-screen display in our main lobby that cycles through employees in the organization.  This was originally implemented as a video but we later built it into a web application so we can control the content on the facewall much more efficiently.',
                 imgLink : '/img/projects/Facewall.jpg'
-            },
-            {
-                projectName : 'Garvinling.com',
-                projectDescription: 'A.k.a this website you\'re on right now! Personal portfolio to showcase projects I\'ve worked on or are currently working on.',
-                imgLink : '/img/projects/CMC.png'
             }
-            
-            
-        
         ]
 
 
